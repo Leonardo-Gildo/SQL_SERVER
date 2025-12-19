@@ -1,6 +1,6 @@
 /* ======================================================
    ********************************************************
-   *      GABARITO - EXERCÍCIOS - NÍVEL FÁCIL (10)
+   *      GABARITO - EXERCICIOS - NIVEL FACIL (10)
 					-- TABELA ACCOUNT --
    ********************************************************
    ====================================================== */
@@ -13,12 +13,12 @@ FROM dbo.DimAccount;
 SELECT COUNT (*) as TOTAL_Contas
 FROM dbo.DimAccount;
 
--- 3. Listar todas as AccountType distintos e não nulos
+-- 3. Listar todas as AccountType distintos e nï¿½o nulos
 SELECT DISTINCT AccountType
 FROM dbo.DimAccount
 WHERE AccountType IS NOT NULL;
 
--- 4. Contar quantas contas têm AccountType nulo
+-- 4. Contar quantas contas tï¿½m AccountType nulo
 SELECT COUNT(*) TOTAL_Contas
 FROM dbo.DimAccount
 WHERE AccountType IS NULL;
@@ -28,12 +28,12 @@ SELECT AccountKey, AccountDescription, AccountType
 FROM dbo.DimAccount
 ORDER BY AccountDescription;
 
--- 6. Listar contas cujo AccountDescription contém a palavra 'Cash' (case-insensitive)
+-- 6. Listar contas cujo AccountDescription contï¿½m a palavra 'Cash' (case-insensitive)
 SELECT AccountKey, AccountDescription
 FROM dbo.DimAccount
 WHERE AccountDescription LIKE '%Cash%'
 
--- 7. Mostrar as 10 maiores AccountCodeAlternateKey (maior valor numérico)
+-- 7. Mostrar as 10 maiores AccountCodeAlternateKey (maior valor numï¿½rico)
 SELECT top 10 AccountKey, AccountDescription, AccountCodeAlternateKey as COD_ALTERNATIVO
 FROM dbo.DimAccount
 ORDER BY AccountCodeAlternateKey DESC;
@@ -62,7 +62,7 @@ ORDER BY QTD_TIPOS_VALORES DESC;
 
 /* ======================================================
    ********************************************************
-   *      GABARITO - EXERCÍCIOS - NÍVEL MÉDIO (10)
+   *      GABARITO - EXERCICIOS - NIVEL MEDIO (10)
 					-- TABELA ACCOUNT --
    ********************************************************
    ====================================================== */
